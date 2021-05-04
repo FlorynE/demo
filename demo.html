@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<title>Title</title>
+    <meta charset="utf-8">
+	<style>
+
+	* {
+		padding : 0;
+		margin: 0;
+		font-family: 'Arial';
+	}
+
+	header, footer { background-color: #3d5062; }
+	header { color: white; }
+	footer { color: #ffffff66; }
+
+	header, footer, main, main > section {
+		padding: 20px;
+	}
+	main > section {
+		border: 1px solid black;
+		margin: 10px 0;
+		background-color: white;
+	}
+	main { background-color: #ddd; }
+
+	/* ---- This is the part that makes the footer behave properly: ---- */
+	body, html { height: 100%; }
+	body {
+		display: grid; grid-template-rows: auto 1fr auto;
+	}
+	
+	/* ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- */
+	
+	input { padding: 4px; }
+	textarea {
+		margin: 22px;
+		padding: 5px;
+	}
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			This is a page that does math.
+		</nav>
+	</header>
+    <main>
+		<section>
+			<div>
+				Get all factors of an integer:
+				<input type="text">
+			</div>
+			<div>
+				<textarea id="answer">answer goes here</textarea>
+			<div>
+		</section>
+		
+    </main>
+	<footer>
+		<em>Today's date: <span id="dateHere"></span>.
+		This page last updated on: 2021-05-01.</em>
+	</footer>
+	
+	<script>
+	let date = new Date();
+	// for other format: date.toLocaleDateString(undefined, {day: 'numeric', month: 'long', year: 'numeric'})
+	document.getElementById('dateHere').innerHTML = date.toLocaleDateString();
+	</script>
+	
+	<script src="file.js"></script>
+</body>
+
+</html>
