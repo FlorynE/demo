@@ -43,7 +43,6 @@ id('btn1').addEventListener('click', function () {
 // ---- ---- ---- ---- ---- ---- ---- ----
 
 
-
 /*
 	str = str.replace(/\s+/g, " ");
 

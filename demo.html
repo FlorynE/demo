@@ -25,17 +25,16 @@
 		display: flex;
 		align-items: center;
 	}
-	main > section > div:nth-child(1) { width: 280px; }
-	main > section > div * {
-		margin: 4px;
-	}
+	main > section > div:nth-child(1) { min-width: 280px; }
+	main > section > div:nth-child(1) * { margin: 4px; }
 	input, .answer { padding: 4px; }
 	.answer {
 		font-size: 12px;
-		width: 300px;
+		min-width: 300px;
 		border: 1px solid #777;
 		height: 50px;
 		overflow: auto;
+		display: inline-block;
 	}
 
 	/* ---- This is the part that makes the footer behave properly: ---- */
@@ -90,7 +89,7 @@
 		
     </main>
 	<footer>
-		<em>Today's date: <span id="dateHere"></span>. This page last updated: 2021-05-10.</em>
+		<em>Today's date: <span id="dateHere"></span>. This page last updated: 2021-05-09.</em>
 	</footer>
 	
 	<script>
