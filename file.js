@@ -27,22 +27,20 @@ function getFactors(value) {
 
 
 id('asdf78').addEventListener('click', function () {
-	//id('answer').innerHTML = getFactors(parseInt(id('rfws32').value)).join(", ");
+	//id('a9873r').innerHTML = getFactors(parseInt(id('rfws32').value)).join(", ");
 	
 	let value = parseInt(id('rfws32').value);
 	let factors = getFactors(value);
 	
-	id('answer').innerHTML = factors.join(", ");
+	id('a9873r').innerHTML = factors.join(", ");
 });
 
 
+/*
+	str = str.replace(/\s+/g, " ");
 
-
-
-
-
-
-
+	str = str.split('/');
+*/
 
 
 
