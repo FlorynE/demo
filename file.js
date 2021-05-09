@@ -16,24 +16,32 @@ function id(x) { return document.getElementById(x); }
 	btn.addEventListener('click', thing);
 */
 
-function getFactors(value) {
-	let result = [];
-	for (let i = 0; i <= value; i += 1) {
-		if (value % i == 0) // if value divides evenly by i, then i is a factor of value
-			result.push(i);
+function getFactors(x) {
+	if (isNaN(x) || x == 0 || x != Math.floor(x)) return;
+	
+	let negative = (x < 0) ? 1 : 0;
+	x = Math.abs(x);
+	
+	let factors = [];
+	for (let i = 1; i <= x; i += 1) {
+		if (x % i == 0) // if x divides evenly by i, then i is a factor of x
+			factors.push(negative ? -i : i);
 	}
-	return result;
+	return factors;
 }
 
-
-id('asdf78').addEventListener('click', function () {
-	//id('a9873r').innerHTML = getFactors(parseInt(id('rfws32').value)).join(", ");
+id('btn1').addEventListener('click', function () {
+	//id('answer1').innerHTML = getFactors(parseInt(id('input1').value)).join(", ");
 	
-	let value = parseInt(id('rfws32').value);
+	let value = parseInt(id('input1').value);
 	let factors = getFactors(value);
 	
-	id('a9873r').innerHTML = factors.join(", ");
+	if (factors)
+		id('answer1').innerHTML = factors.join(", ");
 });
+
+// ---- ---- ---- ---- ---- ---- ---- ----
+
 
 
 /*
